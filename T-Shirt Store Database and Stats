@@ -1,0 +1,26 @@
+--Create a grocery store database
+
+CREATE TABLE tshirts (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, color TEXT, sleeve TEXT, year INTEGER);
+
+INSERT INTO tshirts VALUES (1, "Beyonce", 100.00, "Pink", "Short");
+INSERT INTO tshirts VALUES (2, "Rihanna", 90.00, "Black", "Short");
+INSERT INTO tshirts VALUES (3, "Drake", 85.00, "Blue", "Long");
+INSERT INTO tshirts VALUES (4, "Tyler The Creator", 90.00, "Green", "Long");
+INSERT INTO tshirts VALUES (5, "Jack Harlow", 70.00, "White", "Short";
+INSERT INTO tshirts VALUES (6, "SZA", 80.00, "Purple", "Short";
+INSERT INTO tshirts VALUES (7, "Brent Faiyaz", 50.00, "Black", "Long");
+INSERT INTO tshirts VALUES (8, "Summer Walker", 50.00, "Pink", "Short");
+INSERT INTO tshirts VALUES (9, "Saint Jhn", 60.00, "Black", "Long");
+INSERT INTO tshirts VALUES (10, "Snoh Aalegra", 45.00, "White", "Short");
+INSERT INTO tshirts VALUES (11, "Kanye", 70.00, "Gray", "Short";
+INSERT INTO tshirts VALUES (12, "Jay Z", 85.00, "Black", "Short");
+INSERT INTO tshirts VALUES (13, "Jazmine Sullivan", 50.00, "Yellow", "Short");
+INSERT INTO tshirts VALUES (14, "Ariana Grande", 95.00,"Orange", "Short");
+INSERT INTO tshirts VALUES (15, "Ella Mai", 40.00, "Maroon", "Long";
+
+--display the database ordered by price.
+SELECT * FROM tshirts ORDER BY price;
+
+--what tshirts are priced equal and greater to 80.00?
+SELECT * FROM tshirts
+WHERE price >= 80
