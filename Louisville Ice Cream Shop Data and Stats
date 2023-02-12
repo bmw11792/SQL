@@ -41,14 +41,17 @@ INSERT into louisville_icecream_shop VALUES (34, "Cookie Dough", 30, 4);
 INSERT into louisville_icecream_shop VALUES (35, "Cookie Dough", 21, 5);
 INSERT into louisville_icecream_shop VALUES (36, "Cookie Dough", 33, 6);
 
+--ordered the data by flavor.
 SELECT * FROM louisville_icecream_shop
 ORDER BY flavor;
 
+--averaged total sales greater than 30 percent.
 SELECT flavor, avg(units_sold) AS avg_sales
 FROM louisville_icecream_shop
 GROUP BY flavor
 HAVING avg_sales>30;
 
+--calculaated total sales from week 1-6.
 SELECT flavor, sum(units_sold) AS total_sales from louisville_icecream_shop
 GROUP BY flavor
 HAVING total_sales>200;
