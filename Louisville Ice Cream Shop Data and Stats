@@ -1,0 +1,56 @@
+CREATE TABLE louisville_icecream_shop (
+    id INTEGER PRIMARY KEY,
+    flavor TEXT,
+    units_sold INTEGER,
+    week INTEGER);
+
+INSERT into louisville_icecream_shop VALUES (1,"Vanilla", 40, 1);
+INSERT into louisville_icecream_shop VALUES (2,"Vanilla", 43, 2);
+INSERT into louisville_icecream_shop VALUES (3, "Vanilla", 57, 3);
+INSERT into louisville_icecream_shop VALUES (4, "Vanilla", 65, 4);
+INSERT into louisville_icecream_shop VALUES (5, "Vanilla", 37, 5);
+INSERT into louisville_icecream_shop VALUES (6, "Vanilla", 60, 6);
+INSERT into louisville_icecream_shop VALUES (7, "Strawberry", 27, 1);
+INSERT into louisville_icecream_shop VALUES (8, "Strawberry", 30, 2);
+INSERT into louisville_icecream_shop VALUES (9, "Strawberry", 42, 3);
+INSERT into louisville_icecream_shop VALUES (10, "Strawberry", 53, 4);
+INSERT into louisville_icecream_shop VALUES (11, "Strawberry", 25, 5);
+INSERT into louisville_icecream_shop VALUES (12, "Strawberry", 48, 6);
+INSERT into louisville_icecream_shop VALUES (13, "Chocolate", 17, 1);
+INSERT into louisville_icecream_shop VALUES (14, "Chocolate", 18, 2);
+INSERT into louisville_icecream_shop VALUES (15, "Chocolate", 29, 3);
+INSERT into louisville_icecream_shop VALUES (16, "Chocolate", 32, 4);
+INSERT into louisville_icecream_shop VALUES (17, "Chocolate", 21, 5);
+INSERT into louisville_icecream_shop VALUES (18, "Chocolate", 39, 6);
+INSERT into louisville_icecream_shop VALUES (19, "Butter Pecan", 20, 1);
+INSERT into louisville_icecream_shop VALUES (20, "Butter Pecan", 25, 2);
+INSERT into louisville_icecream_shop VALUES (21, "Butter_Pecan", 36, 3);
+INSERT into louisville_icecream_shop VALUES (22, "Butter Pecan", 37, 4);
+INSERT into louisville_icecream_shop VALUES (23, "Butter Pecan", 23, 5);
+INSERT into louisville_icecream_shop VALUES (24, "Butter Pecan", 44, 6);
+INSERT into louisville_icecream_shop VALUES (25, "Cookies n Cream", 38, 1);
+INSERT into louisville_icecream_shop VALUES (26, "Cookies n Cream", 44, 2);
+INSERT into louisville_icecream_shop VALUES (27, "Cookies n Cream", 46, 3);
+INSERT into louisville_icecream_shop VALUES (28, "Cookies n Cream", 52, 4);
+INSERT into louisville_icecream_shop VALUES (29, "Cookies n Cream", 43, 5);
+INSERT into louisville_icecream_shop VALUES (30, "Cookies n Cream",51, 6);
+INSERT into louisville_icecream_shop VALUES (31, "Cookie Dough", 17, 1);
+INSERT into louisville_icecream_shop VALUES (32, "Cookie Dough", 20, 2);
+INSERT into louisville_icecream_shop VALUES (33, "Cookie Dough", 22, 3);
+INSERT into louisville_icecream_shop VALUES (34, "Cookie Dough", 30, 4);
+INSERT into louisville_icecream_shop VALUES (35, "Cookie Dough", 21, 5);
+INSERT into louisville_icecream_shop VALUES (36, "Cookie Dough", 33, 6);
+
+SELECT * FROM louisville_icecream_shop
+ORDER BY flavor;
+
+SELECT flavor, avg(units_sold) AS avg_sales
+FROM louisville_icecream_shop
+GROUP BY flavor
+HAVING avg_sales>30;
+
+SELECT flavor, sum(units_sold) AS total_sales from louisville_icecream_shop
+GROUP BY flavor
+HAVING total_sales>200;
+
+
