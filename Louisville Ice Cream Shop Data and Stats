@@ -51,9 +51,13 @@ FROM louisville_icecream_shop
 GROUP BY flavor
 HAVING avg_sales>30;
 
---calculaated total sales from week 1-6.
+--calculated total sales from week 1-6.
 SELECT flavor, sum(units_sold) AS total_sales from louisville_icecream_shop
 GROUP BY flavor
 HAVING total_sales>200;
 
+--filtered the data by showing which flavors had sales greater than 30 during week 1.
+SELECT flavor from louisville_icecream_shop where week=1 AND units_sold>30;
 
+--filtered the data by showing which flavors had sales greater than 40 during week 6.
+SELECT flavor from louisville_icecream_shop where week=6 AND units_sold>40;
